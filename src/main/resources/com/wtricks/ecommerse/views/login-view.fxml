@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wtricks.ecommerse.controllers.LoginView">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <image>
+            <Image url="@../assets/logo1.png" />
+         </image>
+         <GridPane.margin>
+            <Insets top="112.0" />
+         </GridPane.margin>
+      </ImageView>
+      <Label text="Welcome to BlankKart" textFill="#0c232f" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="169.0" text="Sign in to continute" textFill="#a9aaab" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label fx:id="label" text="" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets top="16.0" />
+         </GridPane.margin></Label>
+      <TextField fx:id="email" prefHeight="40.0" prefWidth="260.0" promptText="Your Email" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets top="16.0" />
+         </GridPane.margin>
+      </TextField>
+      <PasswordField fx:id="pass" prefHeight="40.0" prefWidth="260.0" promptText="Password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </PasswordField>
+      <Button onAction="#doLogin" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #40bfff;" text="Sign In" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <style>
+            .button:pressed {
+               -fx-opacity: 0.8;
+            }
+         </style>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button onAction="#goForgotPage" mnemonicParsing="false" prefHeight="20.0" prefWidth="260.0" style="-fx-background-color: transparent;" text="Forgot password?" textFill="#40bfff" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets top="80.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button onAction="#goRegisterPage" mnemonicParsing="false" prefHeight="12.0" prefWidth="260.0" style="-fx-background-color: transparent;" text="Register" textFill="#40bfff" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <Label text="Don't have account?" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

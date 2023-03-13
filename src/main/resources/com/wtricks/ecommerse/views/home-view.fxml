@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wtricks.ecommerse.controllers.HomeView">
+   <children>
+      <GridPane prefHeight="53.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="250.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="0.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="text" focusTraversable="false" prefHeight="38.0" prefWidth="160.0" promptText="Search product">
+               <GridPane.margin>
+                  <Insets left="12.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../assets/Search.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#SearchData" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="6.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Search.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollPane layoutY="56.0" prefHeight="498.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #0000;">
+         <content>
+            <GridPane fx:id="grid" alignment="TOP_CENTER" hgap="8.0" prefHeight="205.0" prefWidth="283.0" translateX="5.0" vgap="8.0">
+               <children>
+<!--                  <VBox prefHeight="177.0" prefWidth="125.0" style="-fx-border-color: #000; -fx-border-radius: 10px; -fx-background-color: #fff;" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">-->
+<!--                     <children>-->
+<!--                        <ImageView fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" style="-fx-border-radius: 10px; -fx-border-color: transparent;" translateX="6.0" translateY="8.0">-->
+<!--                           <image>-->
+<!--                              <Image url="@../assets/iphone.png" />-->
+<!--                           </image>-->
+<!--                        </ImageView>-->
+<!--                        <Label prefHeight="38.0" prefWidth="133.0" text="Nike Air Max 270 React ENG" wrapText="true" VBox.vgrow="ALWAYS">-->
+<!--                           <font>-->
+<!--                              <Font name="System Bold" size="12.0" />-->
+<!--                           </font>-->
+<!--                           <VBox.margin>-->
+<!--                              <Insets left="6.0" top="10.0" />-->
+<!--                           </VBox.margin>-->
+<!--                        </Label>-->
+<!--                        <Button defaultButton="true" mnemonicParsing="false" prefWidth="120.0" style="-fx-border-radius: 10px;" text="Buy in $28">-->
+<!--                           <VBox.margin>-->
+<!--                              <Insets left="1.0" />-->
+<!--                           </VBox.margin>-->
+<!--                        </Button>-->
+<!--                     </children>-->
+<!--                  </VBox>-->
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </content></ScrollPane>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="300.0" text="" textAlignment="CENTER" translateY="200.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <HBox layoutY="44.0" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #ffff;" translateY="510.0">
+         <children>
+            <Button disable="true" mnemonicParsing="false" prefHeight="48.0" prefWidth="155.0" style="-fx-background-color: transparent;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button onAction="#goToCartPage" layoutX="10.0" layoutY="10.0" mnemonicParsing="false"  prefHeight="48.0" prefWidth="155.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToAccountPage" prefHeight="48.0" prefWidth="155.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/User.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>
